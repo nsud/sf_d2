@@ -15,7 +15,22 @@ app = Bottle()
 
 @app.route('/')
 def index():
-    return "/"
+    return """
+        <!doctype html>
+        <html lang="en">
+          <head>
+            <title>D2</title>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Hi!</h1>
+              <div>
+                Доступны пути /success и /fail
+              </div>
+            </div>
+          </body>
+        </html>
+        """
 
 
 @app.route('/success')
